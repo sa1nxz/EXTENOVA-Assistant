@@ -1,0 +1,242 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1d4ed8;
+  --background-color: #f8fafc;
+  --text-color: #1e293b;
+  --border-color: #e2e8f0;
+}
+
+body {
+  width: 400px;
+  margin: 0;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.header-controls {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: var(--background-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tab-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  padding: 16px 0;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+textarea, input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background: var(--secondary-color);
+}
+
+.file-upload {
+  margin-bottom: 16px;
+}
+
+.file-label {
+  display: block;
+  padding: 8px;
+  background: var(--background-color);
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file-label input[type="file"] {
+  display: none;
+}
+
+.results-container {
+  margin-top: 16px;
+  padding: 16px;
+  background: var(--background-color);
+  border-radius: 4px;
+  display: block;
+}
+
+.capture-selection {
+    position: fixed;
+    border: 2px solid var(--primary-color);
+    background: rgba(37, 99, 235, 0.1);
+    pointer-events: none;
+    z-index: 999999;
+}
+
+.hidden {
+    display: none;
+}
+
+#screenshot-preview {
+    margin-top: 16px;
+    text-align: center;
+}
+
+#screenshot-preview img {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+#screenshot-preview .action-btn {
+    margin-top: 8px;
+}
+
+.text-red-500 {
+  color: red;
+}
+
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+
+.result-box {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-box h3 {
+  color: var(--primary-color);
+  margin: 0 0 12px 0;
+  font-size: 18px;
+}
+
+.result-content {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.result-content pre {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.confidence {
+  margin-top: 12px;
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--background-color);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.model-selector {
+  margin-bottom: 16px;
+}
+
+.task-selector {
+  margin-bottom: 16px;
+}
+
+.model-selector select,
+.task-selector select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  appearance: none;
+  background-color: var(--background-color);
+  cursor: pointer;
+}
+
+.pin-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.pin-button:hover {
+  background-color: var(--background-color);
+}
+
+.pin-button.active {
+  color: var(--primary-color);
+  background-color: var(--background-color);
+}

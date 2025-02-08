@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-controls">
+        <button id="pinButton" class="pin-button" title="Pin window">📌</button>
+      </div>
+      <h1>🔬 EXTENOVA</h1>
+      <p>Research Assistant</p>
+    </div>
+
+    <div class="model-selector">
+      <select id="modelSelect">
+        <option value="">Select AI Model</option>
+      </select>
+    </div>
+    
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="text">Text Analysis</button>
+      <button class="tab-btn" data-tab="screen">Screen Capture</button>
+      <button class="tab-btn" data-tab="github">GitHub Analysis</button>
+    </div>
+
+    <div id="textTab" class="tab-content active">
+      <div class="task-selector">
+        <select id="taskSelect">
+          <option value="summary">Summary</option>
+          <option value="highlights">Highlights</option>
+          <option value="keywords">Keywords</option>
+          <option value="other">Other Analysis</option>
+        </select>
+      </div>
+      <textarea id="textInput" placeholder="Enter or paste text to analyze..."></textarea>
+      <div class="button-group">
+        <button id="analyzeText" class="action-btn">Analyze Text</button>
+        <div class="file-upload">
+          <label class="file-label">
+            Upload File
+            <input type="file" id="fileInput" accept=".txt,.md,.pdf">
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div id="screenTab" class="tab-content">
+      <button id="captureScreen" class="action-btn">Capture Screen</button>
+      <div id="screenshotPreview" class="hidden">
+        <img id="preview">
+        <button id="analyzeScreenshot" class="action-btn">Analyze Screenshot</button>
+      </div>
+    </div>
+
+    <div id="githubTab" class="tab-content">
+      <input type="text" id="repoUrl" placeholder="Enter GitHub repository URL...">
+      <button id="analyzeRepo" class="action-btn">Analyze Repository</button>
+    </div>
+
+    <div id="results" class="results-container hidden">
+      <md-block id="resultContent"></md-block>
+    </div>
+
+    <div id="loading" class="loading-spinner hidden"></div>
+
+    <div class="footer">
+      <p>Build by <a href="https://skillset.edu.kz/" target="_blank">Skillset Team</a></p>
+    </div>  
+  </div>
+  <script src="popup.js"></script>
+  <!-- MD Block -->
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+</body>
+</html>

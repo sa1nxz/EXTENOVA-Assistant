@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "EXTENOVA",
+  "version": "1.1.3",
+  "description": "AI-powered research assistant for text analysis, screen capture, and GitHub code analysis",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs",
+    "windows"
+  ],
+  "host_permissions": [
+    "https://api.github.com/*",
+    "https://api-inference.huggingface.co/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
