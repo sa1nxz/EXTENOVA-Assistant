@@ -63,8 +63,7 @@ cd extenova
 ## Team
 
 Built by Skillset Team for INFOMATRIX 2025
-- [Visit our website](https://skillset.edu.kz/)
-- Contact: your.email@example.com
+- [Visit our website](https://extenova.onrender.com )
 
 ---
 
