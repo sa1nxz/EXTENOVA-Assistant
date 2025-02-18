@@ -22,8 +22,8 @@ EXTENOVA enhances your research workflow by providing AI-powered analysis of tex
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/extenova.git
-cd extenova
+git clone https://github.com/sa1nxz/EXTENOVA-Assistant.git
+cd EXTENOVA-Assistant
 ```
 
 2. **Important**: Set up your Hugging Face API Token
